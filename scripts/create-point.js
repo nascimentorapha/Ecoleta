@@ -47,9 +47,44 @@ document
     .addEventListener("change", getCities)
 
 
-// fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados").then(function(res) {
-//     return res.json()    
-// }).then(function(data){
-//     console.log(data)
-//  })
+// Itens de coleta
 
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+
+function handleSelectedItem(event) {
+    const itemLi = event.target
+    
+    //add or remove class automatically
+    itemLi.classList.toggle("selected") 
+
+    // console.log(event.target.dataset.id)
+    const itemID = itemLi.dataset.id
+}
+
+for (let item of itemsToCollect){
+    item.addEventListener("click", handleSelectedItem)
+
+}
+
+let selectedItems = []
+
+// Verify selected items. If true, get items
+
+const alreadySelected = selectedItems.findIndex( item => {
+    const itemFound = item == itemID //true or false
+    return itemFound
+    }
+ )
+
+ // if selected, remove selection
+
+ if( alreadySelected >= 0){
+     const filteredItems = selectedItems.filter( item => {
+        const itemIsDifferent = item != itemID 
+        return itemIsDifferent 
+     } )
+     selectedItems = filteredItems
+ } else {
+    selectedItems.push(itemID)
+ }
+console.log(selectedItems)
