@@ -152,3 +152,14 @@ form button:hover{
 
     color: var(--title-color);
 }
+
+.items-grid li.selected{ /*dentro do <li "selected">*/
+    transition-duration: 400ms;
+    background-color: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img, 
+.items-grid li span{
+    pointer-events: none; /* ignora os EventListener("click") */ 
+}
