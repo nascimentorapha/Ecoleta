@@ -47,10 +47,16 @@ document
     .addEventListener("change", getCities)
 
 
+
 // Itens de coleta
 
 const itemsToCollect = document.querySelectorAll(".items-grid li")
 
+const collectedItems = document.querySelector("input[name=items]")
+
+let selectedItems = []
+
+// function to select items to collect on create page
 function handleSelectedItem(event) {
     const itemLi = event.target
     
@@ -59,32 +65,32 @@ function handleSelectedItem(event) {
 
     // console.log(event.target.dataset.id)
     const itemID = itemLi.dataset.id
-}
 
-for (let item of itemsToCollect){
-    item.addEventListener("click", handleSelectedItem)
 
-}
+    // Verify selected items. If true, get items
 
-let selectedItems = []
+    const alreadySelected = selectedItems.findIndex( item => {
+        const itemFound = item == itemID //true or false
+        return itemFound
+        }
+    )
 
-// Verify selected items. If true, get items
+    // if selected, remove selection
 
-const alreadySelected = selectedItems.findIndex( item => {
-    const itemFound = item == itemID //true or false
-    return itemFound
+    if( alreadySelected >= 0){
+        const filteredItems = selectedItems.filter( item => {
+            const itemIsDifferent = item != itemID 
+            return itemIsDifferent 
+        } )
+        selectedItems = filteredItems
+    } else {
+        selectedItems.push(itemID)
     }
- )
 
- // if selected, remove selection
+    collectedItems.value = selectedItems
+}
 
- if( alreadySelected >= 0){
-     const filteredItems = selectedItems.filter( item => {
-        const itemIsDifferent = item != itemID 
-        return itemIsDifferent 
-     } )
-     selectedItems = filteredItems
- } else {
-    selectedItems.push(itemID)
- }
-console.log(selectedItems)
+
+for (const item of itemsToCollect){
+    item.addEventListener("click", handleSelectedItem)
+}
