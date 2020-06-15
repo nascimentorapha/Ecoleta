@@ -56,6 +56,7 @@ const collectedItems = document.querySelector("input[name=items]")
 
 let selectedItems = []
 
+
 // function to select items to collect on create page
 function handleSelectedItem(event) {
     const itemLi = event.target
