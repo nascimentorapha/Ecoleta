@@ -4,7 +4,7 @@
   "description": "♻️ Plataforma para cidadãos encontrarem pontos de coleta de lixo seletiva e/ou reciclável e empresas cadastrarem seus pontos de coleta.",
   "main": "´src/server.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
