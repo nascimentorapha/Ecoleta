@@ -11,11 +11,15 @@ nunjucks.configure("src/views", { //express use the Template Engine
 })
 
 server.get("/", (req, res) => {
-    return res.render("views/index.html")
+    return res.render("index.html")
+})
+// 
+server.get("/create-point", (req, res) => {
+    return res.render("create-point.html")
 })
 
-server.get("/create-point", (req, res) => {
-    return res.sendFile("create-point.html")
+server.get("/search", (req, res) => {
+    return res.render("search-results.html")
 })
 
 
