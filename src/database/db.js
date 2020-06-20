@@ -19,7 +19,7 @@ db.serialize(() => {
         );
     `)
 
-    //Insert register
+    //Insert registry
     const query = `
         INSERT INTO places (
             image,
@@ -47,7 +47,7 @@ db.serialize(() => {
         }
     })
 
-    //Select register
+    //Select registry
 
-    //Delete register
+    //Delete registry
 })
