@@ -1,6 +1,9 @@
 const express = require("express")
 const server = express()
 
+//get database
+const db = require("./database/db.js")
+
 //public folder
 server.use(express.static("public"))
 
