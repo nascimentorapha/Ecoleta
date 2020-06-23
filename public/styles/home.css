@@ -3,7 +3,6 @@
     background: url('../assets/home-background.svg') no-repeat ;
     background-position: 35vw bottom;
     height: 100vh;
-
 }
 
 #page-home .content {
@@ -26,11 +25,12 @@
 
 #page-home header a {
     display: flex;
+    align-items: center;
     color: var(--title-color);
     font-weight: 700;
 }
 
-#page-home header a span{
+#page-home header a span:first-child{
     display: flex;
     background-image: url('../assets/log-in.svg');
     margin-right: 16px;
@@ -40,7 +40,6 @@
 
 #page-home main{
     max-width: 560px;
-    
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -101,4 +100,76 @@
     flex: 1;
     color: white;
     text-align: center;
+}
+
+/* Switch button dark mode */
+
+#page-home header .switch {
+    margin-left: 24px;
+    padding-left: 36px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 24px;
+}
+
+#page-home header .switch img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+#page-home header .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#page-home header .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#page-home header .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#page-home header input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+#page-home header input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+#page-home header input:checked + .slider:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+}
+  
+  /* Rounded sliders */
+#page-home header .slider.round {
+    border-radius: 34px;
+}
+  
+#page-home header .slider.round:before {
+    border-radius: 50%;
 }
