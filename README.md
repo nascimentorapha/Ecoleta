@@ -4,9 +4,6 @@
 </h1>
 
 
-
-
-
  > Find selective garbage and recyclable collection points.
 
 <p align="center"><img src=".github/index.gif?raw=true"/></p>
@@ -44,7 +41,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 $ git clone https://github.com/nascimentorapha/ecoleta.git
 
 # Go into the repository
-$ cd rocketshoes-react-native
+$ cd ecoleta
 
 # Install dependencies
 $ npm install
