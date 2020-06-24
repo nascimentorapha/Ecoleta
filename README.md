@@ -61,7 +61,7 @@ $ npm start
 <p><img src="https://image.flaticon.com/icons/svg/174/174857.svg" width="20"/>  - <a href="https://www.linkedin.com/in/nascimento-rapha/">Linkedin</a> </p> 
 <p><img src="https://image.flaticon.com/icons/svg/893/893257.svg" width="20"/> - <a href="mailto:nascimento.rapha@hotmail.com">Email</a></p>
 
-<p><img src="https://image.flaticon.com/icons/svg/2111/2111425.svg" width="20"/> - <a href="mailto:nascimento.rapha@hotmail.com">Github</a></p>
+<p><img src="https://image.flaticon.com/icons/svg/2111/2111425.svg" width="20"/> - <a href="https://github.com/nascimentorapha">Github</a></p>
 
 
 ---
