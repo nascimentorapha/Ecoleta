@@ -15,6 +15,7 @@
 ## :pushpin: Table of Contents
 * [Technologies](#globe_with_meridians-technologies)
 * [How to Use](#information_source-how-to-use)
+* [Issues](#eyeglasses-issues)
 * [Contact](#large_blue_diamond-contact)
 * [License](#memo-license)
 
@@ -49,7 +50,11 @@ $ npm install
 # Run app
 $ npm start
 ```
+ 
+---
+## :eyeglasses: Issues
 
+Feel free to **file a new issue** with a respective title and description on the [Ecoleta](https://github.com/nascimentorapha/Ecoleta/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**! Best regards, and thank you.
 
 ---
 
